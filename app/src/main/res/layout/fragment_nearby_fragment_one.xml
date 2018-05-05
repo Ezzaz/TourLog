@@ -1,0 +1,52 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.tour_log.tourlog.nearby.NearbyFragmentOne">
+
+
+    <FrameLayout
+        android:layout_marginTop="50dp"
+        android:id="@+id/map_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.google.android.gms.maps.MapView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </com.google.android.gms.maps.MapView>
+    </FrameLayout>
+
+    <com.arlib.floatingsearchview.FloatingSearchView
+        android:layout_marginTop="50dp"
+        android:id="@+id/floating_search_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:floatingSearch_searchHint="Search Location..."
+        app:floatingSearch_suggestionsListAnimDuration="250"
+        app:floatingSearch_showSearchKey="false"
+        app:floatingSearch_leftActionMode="showSearch"
+        app:floatingSearch_close_search_on_keyboard_dismiss="true"/>
+
+    <ru.dimorinny.floatingtextbutton.FloatingTextButton
+        android:id="@+id/map_direction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:floating_background_color="#ffffff"
+        app:floating_title="Show direction"
+        android:layout_margin="2dp"
+        app:floating_title_color="#8b8989"
+        android:layout_gravity="bottom"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/map_mylocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="mini"
+        app:backgroundTint="#ffffff"
+        android:src="@drawable/map_pin"
+        app:rippleColor="#ffffff"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_margin="3dp"/>
+
+</FrameLayout>

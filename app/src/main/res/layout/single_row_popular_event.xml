@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="7dp"
+    android:layout_margin="4dp"
+    app:contentPadding="3dp"
+    app:cardCornerRadius="6dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/popularImg"
+            android:scaleType="fitXY"
+            android:src="@drawable/background_nav"
+            android:layout_width="200dp"
+            android:layout_height="90dp" />
+        <TextView
+            android:id="@+id/popularTitle"
+            android:textColor="#000000"
+            android:layout_marginTop="3dp"
+            android:gravity="center"
+            android:text="CoxBazar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/popularSubTitle"
+            android:gravity="center"
+            android:text="City of bangladesh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

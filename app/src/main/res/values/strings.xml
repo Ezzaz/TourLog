@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">TourLog</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- Facebook application ID and custom URL scheme (app ID prefixed by 'fb'). -->
+    <string name="facebook_application_id" translatable="false">157701545010473</string>
+    <string name="facebook_login_protocol_scheme" translatable="false">fb157701545010473</string>
+
+    <string name="google_map_api">AIzaSyCtvznKmo7SYjCJnmi_fydf-SdHvdW7aeI</string>
+    <string name="google_places_api">AIzaSyA84mVs6TTkV3hIjO1qqMduZeb5OQN4C1Y</string>
+
+    <string name="weather_API_Key">7e85da1626f635ee525b33b132c24d18</string>
+    <string name="nearby_API_Key">AIzaSyCne8S7UnvgVNwhky_ZLLqW8t5GqkwuO4w</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>
