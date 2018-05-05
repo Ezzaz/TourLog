@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -77,6 +78,22 @@ public class ForumsPostAdapter extends RecyclerView.Adapter<ForumsPostAdapter.Fo
             titleTV = itemView.findViewById(R.id.postText);
             userTV = itemView.findViewById(R.id.forumsUser);
             emailTV = itemView.findViewById(R.id.ForumsEmail);
+            likebtn = itemView.findViewById(R.id.like_btn);
+            dislikebtn = itemView.findViewById(R.id.dislike_btn);
+
+            likebtn.setOnClickListener (new View.OnClickListener ( ) {
+                @Override
+                public void onClick ( View view ) {
+                    Toast.makeText (context, "Liked", Toast.LENGTH_LONG).show ( );
+                }
+            });
+
+            dislikebtn.setOnClickListener (new View.OnClickListener ( ) {
+                @Override
+                public void onClick ( View view ) {
+                    Toast.makeText (context, "Disliked", Toast.LENGTH_LONG).show ( );
+                }
+            });
 
 
         }

@@ -41,6 +41,7 @@ import com.tour_log.tourlog.events.EventCostFragment;
 import com.tour_log.tourlog.events.EventDetails;
 import com.tour_log.tourlog.events.PopularEvent;
 import com.tour_log.tourlog.forums.ForumsFragment;
+import com.tour_log.tourlog.gallery.GalleryFragment;
 import com.tour_log.tourlog.login.LoginActivity;
 import com.tour_log.tourlog.nearby.NearbyFragment;
 import com.tour_log.tourlog.profile.ProfileFragment;
@@ -172,6 +173,11 @@ public class MainActivity extends AppCompatActivity
             // Handle the camera action
             //  eventsDetailsAdd();
         } else if (id == R.id.nav_gallery) {
+
+            GalleryFragment fragment = new GalleryFragment ();
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.mainFragmentContainer,fragment);
+            fragmentTransaction.commit();
 
         } else if (id == R.id.nav_weaather) {
             WeatherFragment fragment = new WeatherFragment();

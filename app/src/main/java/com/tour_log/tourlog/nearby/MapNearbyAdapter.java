@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -93,46 +94,7 @@ public class MapNearbyAdapter extends RecyclerView.Adapter<MapNearbyAdapter.near
                 public void onClick(View view) {
                     int position = getAdapterPosition();
 
-
-                    final AlertDialog.Builder dialog;
-                    dialog = new AlertDialog.Builder(context);
-                    dialog.setTitle("Details");
-
-                    LayoutInflater layoutInflater = LayoutInflater.from(context);
-                    LinearLayout ll = (LinearLayout) layoutInflater.inflate(R.layout.single_nearby_details_row,null,false);
-
-                    final ImageView nearbyDetailsImg = ll.findViewById(R.id.nearbyDetailsImg);
-                    final TextView nearbyDetailsName = ll.findViewById(R.id.nearbyDetailsName);
-                    final TextView nearbyDetailsDis = ll.findViewById(R.id.nearbyDetailsDis);
-                    final TextView nearbyDetailsOpen = ll.findViewById(R.id.nearbyDetailsOpen);
-                    final TextView nearbyDetailsRating = ll.findViewById(R.id.nearbyDetailsRating);
-
-                    nearbyDetailsName.setText(nearbyDataList.get(position).getName().toString());
-                    nearbyDetailsDis.setText(nearbyDataList.get(position).getVicinity().toString());
-                    nearbyDetailsOpen.setText("Open Now :"+String.valueOf(nearbyDataList.get(position).getOpeningHours().isOpenNow()));
-                    nearbyDetailsRating.setText("Rating :"+String.valueOf(nearbyDataList.get(position).getRating()));
-
-                    String iconString = nearbyDataList.get(position).getIcon().toString();
-                    Uri iconUri = Uri.parse(iconString);
-                    Picasso.with(context)
-                            .load(iconUri)
-                            .into(nearbyDetailsImg);
-
-                    dialog.setIcon(R.drawable.location);
-                    dialog.setView(ll);
-
-                    dialog.setPositiveButton("Close", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
-                            dialogInterface.cancel();
-                            dialogInterface.dismiss();
-                        }
-                    });
-
-                    dialog.setCancelable(false);
-
-                    dialog.show();
-
+                    Toast.makeText (context, "" + nearbyDataList.get (position).getName ()+ " LOCATION : " + nearbyDataList.get (position).getVicinity () , Toast.LENGTH_SHORT).show ( );
                 }
             });
 
