@@ -43,6 +43,7 @@ import com.tour_log.tourlog.events.PopularEvent;
 import com.tour_log.tourlog.forums.ForumsFragment;
 import com.tour_log.tourlog.gallery.GalleryFragment;
 import com.tour_log.tourlog.login.LoginActivity;
+import com.tour_log.tourlog.mytrip.MyTripFragment;
 import com.tour_log.tourlog.nearby.NearbyFragment;
 import com.tour_log.tourlog.profile.ProfileFragment;
 import com.tour_log.tourlog.weather.WeatherFragment;
@@ -170,8 +171,11 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_trip) {
-            // Handle the camera action
-            //  eventsDetailsAdd();
+
+            MyTripFragment fragment = new MyTripFragment ();
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.mainFragmentContainer,fragment);
+            fragmentTransaction.commit();
         } else if (id == R.id.nav_gallery) {
 
             GalleryFragment fragment = new GalleryFragment ();
