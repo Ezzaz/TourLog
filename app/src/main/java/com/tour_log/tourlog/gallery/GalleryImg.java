@@ -2,22 +2,24 @@ package com.tour_log.tourlog.gallery;
 
 public class GalleryImg {
 
-    private String imgURI;
+    public String name;
+    public String url;
 
-    public GalleryImg( String imgURI) {
+    public String getName () {
+        return name;
+    }
 
-        this.imgURI = imgURI;
+    public String getUrl () {
+        return url;
+    }
+
+    public GalleryImg ( String name, String url ) {
+        this.name = name;
+        this.url = url;
     }
 
     public GalleryImg() {
     }
 
 
-    public String getImgURI() {
-        return imgURI;
-    }
-
-    public void setImgURI(String imgURI) {
-        this.imgURI = imgURI;
-    }
 }

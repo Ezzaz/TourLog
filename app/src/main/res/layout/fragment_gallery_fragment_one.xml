@@ -8,52 +8,70 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:weightSum="100">
+        android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/momentImg"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="25dp"
-            android:layout_weight="80"
+        <Button
+            android:id="@+id/button_takephoto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/dummyphoto"
-            />
+            android:background="@color/colorPrimary"
+            android:textColor="#FFFFFF"
+            android:text="Choose photo"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:onClick="btntakephoto_click"/>
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"/>
+
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="What's on your mind ?"
+            android:textSize="18dp"
+            android:textColor="#0040FF"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"/>
+
     </LinearLayout>
 
 
     <LinearLayout
-        android:layout_gravity="bottom"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="147dp"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
         <Button
-            android:layout_weight="1"
-            android:visibility="gone"
-            android:id="@+id/momentClose"
-            android:layout_gravity="bottom"
+            android:id="@+id/button_uploadimage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
-            android:layout_marginBottom="10dp"
-            android:textColor="#ffffff"
+            android:layout_marginTop="10dp"
             android:background="@color/colorPrimary"
-            android:text="Close"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:onClick="btnuploadimage_click"
+            android:text="Upload Image"
+            android:textColor="#FFFFFF" />
+
         <Button
-            android:layout_weight="1"
-            android:id="@+id/momentTake"
-            android:layout_gravity="bottom"
+            android:id="@+id/button_listimage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
-            android:layout_marginBottom="10dp"
-            android:textColor="#ffffff"
+            android:layout_marginTop="10dp"
             android:background="@color/colorPrimary"
-            android:text="Take Photo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:onClick="btnlistimage_click"
+            android:text="Show Gallery View"
+            android:textColor="#FFFFFF" />
 
     </LinearLayout>
 </FrameLayout>
